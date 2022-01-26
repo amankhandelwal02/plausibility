@@ -1,5 +1,5 @@
 import React from "react";
-import MeetingRoom from '../Images/meeting.png'
+import MeetingRoom from '../../Images/meeting.png'
 
 const Meeting = () => {
   return (

@@ -1,15 +1,15 @@
 import React from "react";
-import ExpertiesCard from "./ExpertiesCard";
-import insurance from "../Images/insurance.png";
-import laptop from "../Images/laptop.png";
-import setting from "../Images/setting.png";
-import Person from "../Images/Person.png";
+import ExpertiesCard from "../Home/ExpertiesCard";
+import insurance from "../../Images/insurance.png";
+import laptop from "../../Images/laptop.png";
+import setting from "../../Images/setting.png";
+import Person from "../../Images/Person.png";
 
 const Experties = () => {
   return (
     <div className="px-3 py-10 lg:p-10 relative">
       <div className="">
-        <h1 className="font-bold text-2xl text-center">Our Experties</h1>
+        <h1 className="font-bold text-3xl text-center">Our Experties</h1>
       </div>
       <div className="flex flex-wrap items-center justify-center lg:space-x-10 lg:py-10 py-5">
         <ExpertiesCard

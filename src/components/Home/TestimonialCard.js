@@ -1,14 +1,14 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
-import Vector from "../Images/Vector.png";
+import Vector from "../../Images/Vector.png";
 
-const TestimonialCard = ({text, name, post}) => {
+const TestimonialCard = ({text, name, post, image}) => {
   return (
     <div className="bg-white flex flex-col items-center justify-center relative px-12 py-7 rounded-3xl">
         <div className="mb-8">
-          <Avatar  sx={{ width: 56, height: 56 }} />
+          <Avatar sx={{ width: 56, height: 56 }} src={image} />
           </div>
-        <div className="bg-yellow-400 flex p-2 rounded-full absolute top-[49px] right-[153px] hidden">
+        <div className="bg-yellow-400 p-2 rounded-full absolute top-[49px] right-[153px] hidden">
           <img src={Vector} alt="" className="h-3 mr-[1px]" />
           <img src={Vector} alt="" className="h-3" />
         </div>

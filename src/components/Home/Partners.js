@@ -1,5 +1,5 @@
 import React from "react";
-import Brand from '../Images/brand.png'
+import Brand from '../../Images/brand.png'
 
 const Partners = () => {
   return (
