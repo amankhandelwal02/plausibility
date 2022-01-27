@@ -3,6 +3,8 @@ import logo from '../Images/logo.png'
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { hiding, showing } from '../features/modalSlice'
 
 const Header = () => {
     const [open, setOpen] = useState(false)
@@ -23,10 +25,21 @@ const Header = () => {
         transition: "all 0.5s ease-in-out",
       })
     }
-
   }
+
+  const dispatch = useDispatch();
+
+  const showModal = () => {
+      dispatch(showing({
+        modal: true,
+      }))
+  }
+  const hideModal = () => {
+      dispatch(hiding())
+  }
+
   return (
-<div className='bg-[#F7FAFF] sticky top-0 z-50 pt-5'>
+<div className='bg-[#F7FAFF] sticky top-0 z-50 pt-5' style={style}>
     <div className='flex items-start px-5 md:px-12'>
       <div className="flex items-center flex-1 space-x-1">
           <Link to='/'><img src={logo} alt="" className="h-10"/></Link>
@@ -38,14 +51,14 @@ const Header = () => {
       <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all">
           <Link to="/about">About Us</Link>
       </div>
-      <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all">
+      <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all" onMouseOver={showModal} onMouseOut={hideModal} >
           <Link to="/">Our Offerings</Link>
       </div>
       <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all">
-          <Link to="/">Blogs</Link>
+          <Link to="/blogs">Blogs</Link>
       </div>
       <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all">
-          <Link to="/">Careers</Link>
+          <Link to="/careers">Careers</Link>
       </div>
       <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all">
           <Link to="/">React Us</Link>
