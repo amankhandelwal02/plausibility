@@ -6,7 +6,7 @@ import frame3 from "../../Images/frame3.png";
 import Slider from "react-slick";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
-const Customers = () => {
+const Customers = ({background, cardBg, heading}) => {
   const settings = {
     className: "center",
     centerMode: true,
@@ -41,10 +41,10 @@ const Customers = () => {
   console.log(sliderRef);
 
   return (
-    <div className="bg-[#F3F7FF] p-10">
-      <div className="py-10 flex flex-col items-center justify-center">
+    <div className={`${background} p-10`}>
+      <div className="mb-10 flex flex-col items-center justify-center">
         <p className="text-4xl font-bold max-w-[50vw] text-center">
-          Here’s what our <span className="text-blue-400">customers</span> say.
+          {heading}
         </p>
       </div>
       <Slider ref={sliderRef} {...settings}>
@@ -56,6 +56,7 @@ const Customers = () => {
           name="Jenny Wilson"
           post="IT manager, XYZ Corp."
           image={frame1}
+          cardBg={cardBg}
         />
         <TestimonialCard
           text="We stuggled for years to find an IT company that we could trust, Let
@@ -65,6 +66,7 @@ const Customers = () => {
           name="Robert Fox"
           post="IT manager, XYZ Corp."
           image={frame2}
+          cardBg={cardBg}
         />
         <TestimonialCard
           text="We stuggled for years to find an IT company that we could trust, Let
@@ -74,6 +76,7 @@ const Customers = () => {
           name="Ronald Richards"
           post="IT manager, XYZ Corp."
           image={frame3}
+          cardBg={cardBg}
         />
         <TestimonialCard
           text="We stuggled for years to find an IT company that we could trust, Let
@@ -83,9 +86,10 @@ const Customers = () => {
           name="Jenny Wilson"
           post="IT manager, XYZ Corp."
           image={frame1}
+          cardBg={cardBg}
         />
       </Slider>
-      {sliderRef.current === null ? null : (
+      {/* {sliderRef.current === null ? null : ( */}
         <div className="flex items-center justify-center mt-7 space-x-5">
           <div
             className="bg-[#656565] p-2 rounded-full hover:cursor-pointer"
@@ -100,7 +104,7 @@ const Customers = () => {
             <ArrowRightAltIcon className="text-white" />
           </div>
         </div>
-      )}
+      {/* )} */}
     </div>
   );
 };

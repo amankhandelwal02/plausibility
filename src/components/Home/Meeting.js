@@ -18,7 +18,7 @@ const Meeting = () => {
           Our Offerings
         </button>
       </div>
-      <div className="flex flex-col items-center justify-center mt-10 hidden md:block">
+      <div className="lg:flex lg:flex-col lg:items-center lg:justify-center mt-10 hidden md:block">
           <img src={MeetingRoom} alt="" className='h-[250px] md:h-[230px] lg:h-[270px]' />
       </div>
     </div>

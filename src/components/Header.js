@@ -45,13 +45,10 @@ const Header = () => {
       dispatch(hiding())
     }
   }
-  
-  const hideModal = () => {
-      dispatch(hiding())
-  }
+
 
   return (
-<div className='bg-[#F7FAFF] sticky top-0 z-50 pt-5' style={style}>
+<div className='bg-[#F7FAFF] sticky top-0 z-50 py-3' style={style}>
     <div className='flex items-start px-5 md:px-12'>
       <div className="flex items-center flex-1 space-x-1">
           <Link to='/'><img src={logo} alt="" className="h-10"/></Link>
@@ -63,7 +60,7 @@ const Header = () => {
       <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all">
           <Link to="/about">About Us</Link>
       </div>
-      <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all" onClick={showModal} onBlur={hideModal} >
+      <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all" onClick={showModal} >
           <Link to="/">Our Offerings</Link>
       </div>
       <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all">

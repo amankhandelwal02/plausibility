@@ -76,6 +76,7 @@ const Location = () => {
           image={infoPhone}
           heading="PHONE"
           description="+91 9632585475"
+          background='white'
         />
         <InfoCard
           image={infoLocation}
@@ -84,11 +85,13 @@ const Location = () => {
 Sakti Statesman, Green Glen
 Layout, near Ibblur lake,
 Bellandur 560103"
+background='white'
         />
         <InfoCard
           image={infoEmail}
           heading="EMAIL"
           description="enquiries@plausibility solutions.com"
+          background='white'
         />
       </div>
     </div>

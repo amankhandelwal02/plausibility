@@ -1,9 +1,18 @@
 import React from "react";
 import hire from '../Images/hire.png'
+import { motion } from 'framer-motion'
+
 
 const Careers = () => {
   return (
-    <div>
+    <motion.div
+  initial={{opacity: 0}}
+  animate={{opacity: 1}}
+  exit={{opacity: 0}}
+  transition={{
+    delay: .1,
+  }}
+>
       <div className="bg-[#F7FAFF] space-y-8 p-5">
         <div className="flex flex-col item-center text-center justify-center">
           <h1 className="text-3xl font-bold">We're hiring!</h1>
@@ -17,7 +26,7 @@ const Careers = () => {
         </div>
         
       </div>
-    </div>
+      </motion.div>
   );
 };
 

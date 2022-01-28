@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HoverModal = () => {
   return (
@@ -6,7 +7,7 @@ const HoverModal = () => {
       <div className="grid grid-cols-2 gap-5">
         <div className="space-y-1">
           <h1 className="text-base font-semibold text-[#FFAB3F]">Solution</h1>
-          <p className="text-sm">IOT</p>
+          <p className="text-sm hover:text-[#FFAB3F]"><Link to='/iot' >IOT</Link></p>
           <p className="text-sm">AI</p>
           <p className="text-sm">Clout Computing</p>
           <p className="text-sm">Block Chain</p>

@@ -10,9 +10,16 @@ const Banner = () => {
 
   const currentState = useSelector(selectModal)
 
+  const dispatch = useDispatch();
+
+  const hideModal = () => {
+    dispatch(hiding())
+}
+
+
   return (
     <>
-    <div className="bg-[#F7FAFF] h-[86vh] lg:h-[62vh] block lg:flex items-center relative">
+    <div className="bg-[#F7FAFF] h-[86vh] lg:h-[62vh] block lg:flex items-center relative" onClick={hideModal}>
       <div className="absolute">
         <img src={pattern} alt="" className="h-[350px]" />
       </div>

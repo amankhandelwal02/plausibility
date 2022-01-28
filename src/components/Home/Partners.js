@@ -1,13 +1,13 @@
 import React from "react";
 import Brand from '../../Images/brand.png'
 
-const Partners = () => {
+const Partners = ({text}) => {
   return (
     <div>
-      <div className=" py-5 flex flex-col items-start lg:items-center justify-center space-y-8">
-        <div className="px-10">
-        <h1 className="text-3xl font-bold md:max-w-[70vw] lg:max-w-[50vw] text-left lg:text-center">
-          We’re proud partners with the industry’s leading tech companies.
+      <div className="py-5 flex flex-col items-center justify-center space-y-8">
+        <div className="px-5 lg:px-10">
+        <h1 className="text-3xl font-bold md:max-w-[70vw] lg:max-w-[50vw] text-center">
+          {text}
         </h1>
         </div>
         <div>
