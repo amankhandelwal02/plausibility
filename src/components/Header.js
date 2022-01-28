@@ -11,7 +11,6 @@ const Header = () => {
   const [style, setStyle] = useState({})
 
   const show = () => {
-    console.log("clicked")
     setOpen(true)
     setStyle({
       left: "0",
@@ -27,13 +26,26 @@ const Header = () => {
     }
   }
 
+  const hideNav = () => {
+    setOpen(false)
+    setStyle({
+      left: "-100%",
+      transition: "all 0.5s ease-in-out",
+    })
+  }
+
   const dispatch = useDispatch();
 
   const showModal = () => {
+    if(window.innerWidth > 1024) {
       dispatch(showing({
         modal: true,
       }))
+    } else {
+      dispatch(hiding())
+    }
   }
+  
   const hideModal = () => {
       dispatch(hiding())
   }
@@ -47,11 +59,11 @@ const Header = () => {
       <div className=" lg:hidden block">
         {open === true ? <CloseIcon className='cursor-pointer' onClick={show}/> : <MenuIcon className='cursor-pointer' onClick={show}/>}
       </div>
-      <div className="fixed top-0 left-[-100%] bg-black opacity-90 text-white h-[100vh] w-[70%] space-y-10 text-center py-[17%] lg:static lg:bg-white lg:text-black lg:flex lg:space-y-0 lg:space-x-16 lg:h-0 lg:justify-end lg:py-0 lg:pr-20" style={style}>
+      <div className="fixed top-0 left-[-100%] bg-black opacity-90 text-white h-[100vh] w-[55%] space-y-10 text-center py-[10%] lg:static lg:bg-white lg:text-black lg:flex lg:space-y-0 lg:space-x-16 lg:h-0 lg:justify-end lg:py-0 lg:pr-20" style={style} onClick={hideNav}>
       <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all">
           <Link to="/about">About Us</Link>
       </div>
-      <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all" onMouseOver={showModal} onMouseOut={hideModal} >
+      <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all" onClick={showModal} onBlur={hideModal} >
           <Link to="/">Our Offerings</Link>
       </div>
       <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all">
@@ -61,7 +73,7 @@ const Header = () => {
           <Link to="/careers">Careers</Link>
       </div>
       <div className="font-semibold lg:text-sm hover:cursor-pointer hover:text-yellow-400 transition-all">
-          <Link to="/">React Us</Link>
+          <Link to="/reach-us">React Us</Link>
       </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ const Banner = () => {
 
   return (
     <>
-    <div className="bg-[#F7FAFF] h-[76vh] lg:h-[62vh] block lg:flex items-center relative">
+    <div className="bg-[#F7FAFF] h-[86vh] lg:h-[62vh] block lg:flex items-center relative">
       <div className="absolute">
         <img src={pattern} alt="" className="h-[350px]" />
       </div>

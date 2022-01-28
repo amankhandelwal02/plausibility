@@ -6,6 +6,7 @@ import google from '../Images/google.png'
 import youtube from '../Images/youtube.png'
 import linkedin from '../Images/linkedin.png'
 import instagram from '../Images/insta.png'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -27,18 +28,18 @@ const Footer = () => {
           </div>
           <p className='font-bold'>Offices: <span className="font-normal">Bangalore, Japan , USA</span></p>
       </div>
-      <div className='space-y-5'>
+      <div className='space-y-5 lg:flex-[0.3]'>
           <h1 className="text-xl font-bold">Quick Links</h1>
-          <p>About Us</p>
-          <p>Our Offerings</p>
+          <p><Link to="/about">About Us</Link></p>
+          <p><Link to="/">Our Offerings</Link></p>
           <p>Collaborate with us</p>
-          <p>Careers</p>
+          <p><Link to="/careers">Careers</Link></p>
       </div>
-      <div className='space-y-5'>
+      <div className='space-y-5 lg:flex-[0.6]'>
           <h1 className="text-xl font-bold">Connect with Us</h1>
           <p>+91 8756478035</p>
           <p>support@plausibilitysolutions.com</p>
-          <p>Reach Us</p>
+          <p><Link to="/">React Us</Link></p>
           <p>Subscribe to Newsletters</p>
       </div>
     </div>

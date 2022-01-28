@@ -2,7 +2,7 @@ import React from "react";
 
 const HoverModal = () => {
   return (
-    <div className="z-20 bg-[#fff] px-10 py-7 rounded-2xl absolute top-2 right-20">
+    <div className="z-20 bg-[#fff] px-10 py-7 rounded-2xl fixed top-16 right-20">
       <div className="grid grid-cols-2 gap-5">
         <div className="space-y-1">
           <h1 className="text-base font-semibold text-[#FFAB3F]">Solution</h1>
