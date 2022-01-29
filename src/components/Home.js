@@ -25,7 +25,7 @@ const IndexPage = () => {
       <Solutions />
       <Meeting />
       <Partners text='We’re proud partners with the industry’s leading tech companies.' />
-      <Customers background='bg-[#F3F7FF]' cardBg='white' heading={heading} />
+      <Customers background='bg-[#F3F7FF]' cardBg='white' heading={heading} paddingY='10' />
     </motion.div>
   )
 }

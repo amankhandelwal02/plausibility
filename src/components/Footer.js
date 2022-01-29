@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className='px-12 md:px-20 py-10 md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-20 items-center space-y-10 md:space-y-0 lg:space-y-0 lg:flex'>
+    <div className='px-7 md:px-20 py-10 md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-20 items-center space-y-10 md:space-y-0 lg:space-y-0 lg:flex'>
       <div className='space-y-5 lg:flex-1'>
           <img src={logo} alt="" className="h-10" />
           <p className=''>2021 Plausibility Solutions. All rights reserved.</p>

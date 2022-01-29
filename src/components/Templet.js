@@ -17,7 +17,7 @@ const Templet = () => {
       <Desc title='Engagement Methedology' subtitle='Successful outsourced product development demands an experienced and technically qualified services provider. Qualtech, with its experienced resource pool, in-depth technical expertise, and business process knowledge, helps you resolve your business problems efficiently and effectively. Qualtech specializes in planning, developing, designing, implementing, and supporting your software product, ensuring a high ROI and low ownership costs.' />
       <Tech title='Technology Stack' />
       <Partners text='Valued Partner Testimonials' />
-      <Customers background='white' cardBg='[#F3F7FF]' />
+      <Customers background='white' cardBg='[#F3F7FF]' paddingY='0' paddingB='10' />
       <Query />
     </div>
   )

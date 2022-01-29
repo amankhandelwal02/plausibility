@@ -2,6 +2,7 @@ import React from 'react'
 import Location from './Reach/Location'
 import ReachBanner from './Reach/ReachBanner'
 import { motion } from 'framer-motion'
+import Find from './Reach/Find'
 
 
 const Reach = () => {
@@ -16,6 +17,7 @@ const Reach = () => {
 >
       <ReachBanner />
     <Location />
+    <Find />
     </motion.div>
   )
 }

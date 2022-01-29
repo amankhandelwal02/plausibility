@@ -6,7 +6,7 @@ import frame3 from "../../Images/frame3.png";
 import Slider from "react-slick";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
-const Customers = ({background, cardBg, heading}) => {
+const Customers = ({ background, cardBg, heading, paddingY, paddingB  }) => {
   const settings = {
     className: "center",
     centerMode: true,
@@ -37,17 +37,16 @@ const Customers = ({background, cardBg, heading}) => {
     ],
   };
 
-  const sliderRef = useRef(null);
-  console.log(sliderRef);
-
   return (
-    <div className={`${background} p-10`}>
+    <div className={`${background} px-10 py-${paddingY} pb-${paddingB}`}>
       <div className="mb-10 flex flex-col items-center justify-center">
-        <p className="text-4xl font-bold max-w-[50vw] text-center">
-          {heading}
-        </p>
+        {heading && (
+          <p className="text-4xl font-bold max-w-[50vw] text-center">
+            {heading}
+          </p>
+        )}
       </div>
-      <Slider ref={sliderRef} {...settings}>
+      <Slider {...settings}>
         <TestimonialCard
           text="We stuggled for years to find an IT company that we could trust, Let
           alone understand. While others would try to sell us IT solutions.
@@ -89,22 +88,18 @@ const Customers = ({background, cardBg, heading}) => {
           cardBg={cardBg}
         />
       </Slider>
-      {/* {sliderRef.current === null ? null : ( */}
-        <div className="flex items-center justify-center mt-7 space-x-5">
-          <div
-            className="bg-[#656565] p-2 rounded-full hover:cursor-pointer"
-            onClick={sliderRef?.current?.slickPrev()}
-          >
-            <ArrowRightAltIcon className="rotate-180 text-white" />
-          </div>
-          <div
-            className="bg-[#3DB3F5] p-2 rounded-full hover:cursor-pointer"
-            onClick={sliderRef?.current?.slickNext()}
-          >
-            <ArrowRightAltIcon className="text-white" />
-          </div>
+      <div className="flex items-center justify-center mt-7 space-x-5">
+        <div
+          className="bg-[#656565] p-2 rounded-full hover:cursor-pointer"
+        >
+          <ArrowRightAltIcon className="rotate-180 text-white" />
         </div>
-      {/* )} */}
+        <div
+          className="bg-[#3DB3F5] p-2 rounded-full hover:cursor-pointer"
+        >
+          <ArrowRightAltIcon className="text-white" />
+        </div>
+      </div>
     </div>
   );
 };
